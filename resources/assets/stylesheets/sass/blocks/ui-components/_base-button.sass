@@ -1,0 +1,32 @@
+.base-button
+  display: inline-block
+  cursor: pointer
+  text-decoration: none
+  border: 2px solid
+  border-radius: 3px
+  transition: .3s ease
+  &:hover
+    text-decoration: none
+
+  &--small
+    font-size: 12px
+    padding: 10px 25px
+
+  &--medium
+
+  &--large
+
+  &--filled
+    background: $base-color
+    border-color: $base-color
+    color: #ffffff
+    &:hover
+      background: transparent
+      color: $base-color
+
+  &--border
+    border-color: rgba(31, 26, 65, .07)
+    color: $base-color
+    &:hover
+      border-color: $base-color
+      color: $base-color
