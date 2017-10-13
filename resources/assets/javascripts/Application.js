@@ -3,6 +3,8 @@ window.$ = window.jQuery = require('jquery');
 require('bootstrap-sass');
 let AOS = require('aos');
 
+import TestimonialsSlider from './modules/TestimonialsSlider';
+
 class Application{
     constructor(){
         console.log('application start');
@@ -13,6 +15,7 @@ class Application{
         $(window).on('load', function() {
             AOS.init();
         });
+        new TestimonialsSlider();
     }
 }
 
