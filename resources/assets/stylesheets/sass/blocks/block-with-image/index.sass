@@ -5,7 +5,6 @@
   text-align: center
   padding: 35px
   position: relative
-  margin-top: 60px
 
   &__image
     position: absolute
@@ -15,10 +14,12 @@
     height: 200px
     img
       max-width: 100%
-      max-height: 100%
+      //max-height: 100%
 
   &__info
     margin-top: 140px
+    &--less-margin
+      margin-top: 100px
 
   &__title
     font-family: $montserrat-bold
@@ -32,3 +33,14 @@
     font-size: 15px
     color: #858a8d
     line-height: 25px
+    a
+      font-family: $montserrat-medium
+      color: #103b4b
+      opacity: .2
+      text-decoration: underline
+
+  &__price-color
+    font-family: $montserrat-bold
+    font-size: 35px
+    line-height: 26px
+    margin-top: 30px
