@@ -10,10 +10,26 @@ export default class TestimonialsSlider{
 
     _carouselInit(){
         $('#testimonialContainer').owlCarousel({
-            items: 3,
             margin: 40,
             loop: true,
-            //autoWidth: true
+            responsive: {
+                992: {
+                    items: 3,
+                },
+                640: {
+                    items: 2,
+                },
+                480: {
+                    margin: 10,
+                    stagePadding: 20,
+                    items: 1
+                },
+                0: {
+                    margin: 10,
+                    stagePadding: 20,
+                    items: 1
+                }
+            }
         });
     }
 }

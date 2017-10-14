@@ -73,5 +73,21 @@
     +media-768
       height: auto
 
+  &--time
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background: #000000
+      opacity: 0
+      transition: .3s ease
+    +media-1200
+      &:after
+        opacity: .7
+
   &--no-paddings
     padding: 0
