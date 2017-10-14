@@ -9,8 +9,15 @@
 
   &__nav
     text-align: center
+    +media-768
+      text-align: right
 
   &__nav-menu
+    &--desktop
+      +media-768
+        display: none
+    &--mobile
+      display: none
 
   &__nav-menu-item
     display: inline-block
@@ -26,3 +33,35 @@
 
   &__buttons
     text-align: right
+
+  &__burger
+    display: none
+    width: 30px
+    height: 25px
+    transform: rotate(0deg)
+    transition: .5s ease-in-out
+    cursor: pointer
+    +media-768
+      display: inline-block
+    span
+      display: block
+      position: absolute
+      height: 3px
+      width: 100%
+      background: #cac9d2
+      border-radius: 9px
+      opacity: 1
+      left: 0
+      transform: rotate(0deg)
+      transition: .25s ease-in-out
+      &:nth-child(1)
+        top: 0px
+        transform-origin: left center
+
+      &:nth-child(2)
+        top: 11px
+        transform-origin: left center
+
+      &:nth-child(3)
+        top: 22px
+        transform-origin: left center

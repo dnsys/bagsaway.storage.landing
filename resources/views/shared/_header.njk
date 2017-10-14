@@ -1,14 +1,14 @@
 <header class="header">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-md-4">
+            <div class="col">
                 <div class="header__logo">
                     <img src="${require('/assets/images/logo.svg')}" alt="BagsAway">
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col">
                 <div class="header__nav">
-                    <ul class="header__nav-menu">
+                    <ul class="header__nav-menu header__nav-menu--desktop">
                         <li class="header__nav-menu-item">
                             <a href="#">Storage</a>
                         </li>
@@ -19,9 +19,14 @@
                             <a href="#">FAQ</a>
                         </li>
                     </ul>
+                    <div class="header__burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col d-none d-lg-block">
                 <div class="header__buttons">
                     <a href="#" class="base-button base-button--small base-button--filled">BOOK NOW</a>
                     <a href="#" class="base-button base-button--small base-button--border">SIGN IN</a>
