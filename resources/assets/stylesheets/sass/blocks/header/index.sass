@@ -16,8 +16,69 @@
     &--desktop
       +media-768
         display: none
-    &--mobile
-      display: none
+
+  &__mobile-menu
+    display: none
+    position: fixed
+    flex-flow: column
+    justify-content: space-between
+    right: 0
+    bottom: 0
+    left: 0
+    background: $base-color
+    height: 100vh
+    z-index: 9
+    top: 88px
+    padding: 50px 20px 138px
+  &__mobile-menu-list
+    width: 100%
+    li
+      text-align: center
+      padding: 10px 0
+      a
+        color: #fafcfe
+        font-family: $montserrat-bold
+        font-size: 26px
+        opacity: 0.5
+        line-height: 46px
+        &.active
+          opacity: 1
+
+  &__mobile-menu-bottom
+    text-align: center
+
+  &__mobile-menu-social
+    li
+      display: inline-block
+      padding: 0 5px
+      &:first-child
+        padding-left: 0
+      &:last-child
+        padding-right: 0
+      a
+        display: block
+        position: relative
+        width: 40px
+        height: 40px
+        border: 1px solid #ffffff
+        border-radius: 50%
+        transition: .3s ease
+        &:hover
+          border-radius: 0
+        svg
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+          transition: .3s ease
+
+  &__mobile-menu-phone
+    margin-top: 20px
+    a
+      color: #ffffff
+      font-size: 15px
+      font-family: $maison-neue-book
+      font-weight: bold
 
   &__nav-menu-item
     display: inline-block
@@ -33,6 +94,8 @@
 
   &__buttons
     text-align: right
+    position: relative
+    display: inline-block
 
   &__burger
     display: none
@@ -65,3 +128,100 @@
       &:nth-child(3)
         top: 22px
         transform-origin: left center
+    &.open
+      span
+        &:nth-child(1)
+          transform: rotate(45deg)
+          top: 0px
+          left: 6px
+
+        &:nth-child(2)
+          width: 0%
+          opacity: 0
+
+        &:nth-child(3)
+          transform: rotate(-45deg)
+          top: 21px
+          left: 5px
+
+  &__user-menu
+    display: inline-block
+
+  &__user-menu-link
+    display: inline-block
+    vertical-align: middle
+    color: #888888
+    font-size: 14px
+    &:hover
+      text-decoration: none
+      color: #888888
+    &:after
+      content: ''
+      border: solid $base-color
+      border-width: 0 1px 1px 0
+      display: inline-block
+      padding: 3px
+      transform: rotate(45deg)
+      margin: 0 0 3px 5px
+      transition: .3s ease
+    &:focus
+      color: #888888
+      text-decoration: none
+    &.open
+      &:after
+        content: ''
+        border: solid $base-color
+        border-width: 0 1px 1px 0
+        display: inline-block
+        padding: 3px
+        margin: 0 0 0px 5px
+        transform: rotate(226deg)
+
+  &__user-menu-photo
+    width: 28px
+    height: 28px
+    background-position: center
+    background-size: cover
+    border: 1px solid #888888
+    border-radius: 50%
+    display: inline-block
+    vertical-align: middle
+    margin-right: 10px
+
+  &__user-menu-dropdown
+    position: absolute
+    display: none
+    background: #ffffff
+    border-radius: 4px
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08)
+    border: solid 1px #dfe3e9
+    z-index: 99
+    text-align: left
+    left: -20px
+    top: 45px
+    li
+      border-bottom: 1px solid #dfe3e9
+      &:last-child
+        border-bottom: none
+      a
+        color: #354052
+        padding: 20px
+        display: inline-block
+        width: 100%
+        transition: .3s ease
+        &:hover
+          text-decoration: none
+          background: rgba(223, 227, 223, 0.5)
+          color: $base-color
+
+  &__logout
+    display: inline-block
+    vertical-align: middle
+    margin-left: 10px
+    line-height: 0
+    #header-logout-svg
+      transition: .3s ease
+      fill: $base-color
+    &:hover
+      #header-logout-svg
+        fill: #2e81e6
