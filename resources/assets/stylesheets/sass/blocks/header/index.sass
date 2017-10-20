@@ -21,7 +21,7 @@
     display: none
     position: fixed
     flex-flow: column
-    justify-content: space-between
+    justify-content: space-around
     right: 0
     bottom: 0
     left: 0
@@ -29,7 +29,7 @@
     height: 100vh
     z-index: 9
     top: 88px
-    padding: 50px 20px 138px
+    padding: 20px 20px 88px
   &__mobile-menu-list
     width: 100%
     li
@@ -147,6 +147,42 @@
   &__user-menu
     display: inline-block
 
+    &--mobile
+      //padding: 5px 0
+      .header__user-menu-link
+        color: #ffffff !important
+        font-size: 18px
+        line-height: 38px
+        border-bottom: 1px solid rgba(255, 255, 255, .5)
+        padding: 10px 0
+        width: 300px
+        position: relative
+        &:after
+          border-color: #ffffff
+          border-width: 0 2px 2px 0
+          padding: 4px
+          margin-left: 10px
+          position: absolute
+          right: 10px
+          top: 29px
+      .header__user-menu-dropdown
+        position: relative
+        top: auto
+        left: auto
+        background: transparent
+        border: none
+        box-shadow: none
+        padding: 10px 0
+        li
+          border-bottom: none
+          text-align: center
+        a
+          padding: 10px
+          color: #ffffff
+      .header__user-menu-photo
+        width: 50px
+        height: 50px
+
   &__user-menu-link
     display: inline-block
     vertical-align: middle
@@ -169,11 +205,6 @@
       text-decoration: none
     &.open
       &:after
-        content: ''
-        border: solid $base-color
-        border-width: 0 1px 1px 0
-        display: inline-block
-        padding: 3px
         margin: 0 0 0px 5px
         transform: rotate(226deg)
 
